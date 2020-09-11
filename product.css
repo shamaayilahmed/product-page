@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  font-family: sans-serif;
+}
+
+#wrap {
+display:grid;  
+}
+/** global classes styling **/
+strong{
+  color:darkgoldenrod;
+  font-style:italic;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 2px solid black;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  min-height: 50px;
+  width:100%;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #eee;
+}
+
+@media (max-width: 600px) {
+  header {
+    width:100%;
+    flex-wrap: wrap;
+  }
+}
+
+.logo {
+  height:20vh;
+  width: 50vw;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 0px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+nav {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  nav {
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+
+nav > ul {
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+  nav > ul {
+    flex-direction: column;
+  }
+}
+#top{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction:column;
+  margin-top: 100px;
+  height:200px;
+}
+#top > h2{
+  margin-bottom:25px;
+  word-wrap:break-word;
+}
+#top input[type="email"]{
+  max-width:250px;
+  width:100%;
+  padding:8px;
+}
+#top input[type="submit"]{
+  max-width:160px;
+  width:100%;
+  margin:15px 0;
+  border:0;
+  background-color:darkcyan;
+  height:30px;
+}
+#top input[type="submit"]:hover{
+  background-color:goldenrod;
+  border:0;
+  transition:background-color 0.5s;
+}
+@media (max-width: 650px) {
+  #top{
+    margin-top:200px;
+  }
+}
+#features{
+  margin-top:35px;
+}
+#features .icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:125px;
+  width:20vw;
+  color:darkcyan;
+}
+@media (max-width:550px){
+  #features .icon{
+    display:none;
+  }
+}
+#features .desc{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  height:125px;
+  width:80vw;
+  padding:5px
+}
+@media (max-width:650px){
+  #features .desc{
+    text-align:center;
+    width:100%;
+    height:130px;
+    padding:0;
+   }
+}
+@media (max-width:650px){
+  #features{
+      margin-top:0;
+    }
+}  
+#tech{
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+} 
+#tech > iframe{
+    max-width:560px;
+    width:100%;
+}
+#pricing{
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+}
+
+.product{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  width:33.33%;
+  margin:10px;
+  border:1px solid darkgoldenrod;
+  border-radius:5px;
+}
+.product > .product-name{
+  padding:15px 0;
+  text-transform:uppercase;
+  font-weight:600;
+  background:#ddd;
+  width:100%;
+  color:black;
+  border-radius:5px;
+}
+.product > h2{
+  margin-top:15px;
+}
+.product > ol{
+  margin:15px 0;
+}
+.product > ol > li{
+  padding:5px 0;
+}
+.product > button{
+  border:0;
+  background:darkcyan;
+  margin:15px 0;
+  font-weight:500;
+}
+@media (max-width:650px){
+  #pricing{
+    flex-direction:column;
+  }
+  .product{
+    max-width:300px;
+    width:100%;
+    margin:0 auto;
+    margin-bottom:20px;
+  }
+}
+footer{
+  margin-top:20px;
+  background-color:#ddd;
+  padding:20px;
+}
+footer > ul{
+  display:flex;
+  justify-content:flex-end;
+}
+footer > ul > li{
+  padding:0 10px;
+}
+footer > span{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:5px;
+  font-size:0.9em;
+  color:#444;
+}
